@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE-edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Exercise 7: CSS Lists</title>
+    <style>
+        ul li:first-child {
+            list-style-type: circle;
+        }
+        ul li:last-child {
+            list-style-type: square;
+        }
+        ul li:nth-child(2) {
+            list-style-type: disc;
+        }
+        ul li:nth-child(3) {
+            list-style-type: none;
+        }
+        ol li:first-child {
+            list-style-type: decimal-leading-zero;
+        }
+        ol li:last-child {
+            list-style-type: decimal;
+        }
+        ol li:nth-child(2) {
+            list-style-type: armenian;
+        }
+        ol li:nth-child(3) {
+            list-style-type: georgian;
+        }
+        ol li:nth-child(4) {
+            list-style-type: lower-alpha;
+        }
+        ol li:nth-child(5) {
+            list-style-type: lower-greek;
+        }
+        ol li:nth-child(6) {
+            list-style-type: lower-latin;
+        }
+        ol li:nth-child(7) {
+            list-style-type: lower-roman;
+        }
+        .division-container {
+            max-width: 600px;
+            min-width: 400px;
+            width: 480px;
+            height: 200px;
+            overflow: hidden;
+            margin: auto;
+            padding: 5px;
+        }
+        .division1 {
+            background: red;
+            float: left;
+            width: calc(50% - 20px);
+            padding: 10px;
+            height: calc(100% - 20px);
+            text-align: center;
+        }
+        .division2 {
+            background: yellow;
+            float: right;
+            width: 50%;
+            height: 100%;
+        }
+        .division2-contents {
+            padding: 10px;
+        }
+        .position-static {
+            position: static;
+            background: red;
+            width: 500px;
+            height: 500px;
+        }
+        .position-relative {
+            position: relative;
+            background: yellow;
+            width: 500px;
+            height: 500px;
+        }
+        .position-absolute {
+            position: absolute;
+            background: green;
+            width: 50px;
+            height: 50px;
+            top: 60px;
+            left: 10px;
+        }
+        .position-fixed {
+            position: fixed;
+            background: #888;
+            color: whitesmoke;
+            width: 100%;
+            height: 40px;
+            top: 0;
+            z-index: 99;
+            margin: 0 0 0 -10px;
+            padding: 5px 10px;
+        }
+        body {
+            margin-top: 60px;
+        }
+        .display-block {
+            display: block;
+            background-color: red;
+            width: 100px;
+            height: 50px;
+        }
+        .display-inline {
+            display: inline;
+            background-color: yellow;
+            width: 100px; /* this will be ignored when using inline display */
+            height: 50px; /* this will be ignored when using inline display*/
+        }
+        .display-inline-block {
+            display: inline-block;
+            background-color: green;
+            width: 100px;
+            height: 50px;
+        }
+        .display-none {
+            display: none;
+            background-color: green; /* this will be useless when using none display */
+            width: 100px; /* this will be useless when using none display */
+            height: 50px; /* this will be useless when using none display */
+        }
+        .flexbox {
+            background-color: blue;
+            display: flex;
+            width: 100%;
+            height: 100px;
+            flex-wrap: wrap;
+            flex-direction: row;
+            /* align-content: center; */
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .flex-1 {
+            background-color: red;
+            width: 28%;
+        }
+        .flex-2 {
+            background-color: yellow;
+            width: 28%;
+        }
+        .flex-3 {
+            background-color: green;
+            width: 28%;
+        }
+    </style>
+    </head>
+    <body>
+        <h1>Sample Unordered List</h1>
+        <ul>
+            <li>Sample Item</li>
+            <li>Sample Item</li>
+            <li>Sample Item</li>
+            <li>Sample Item</li>
+        </ul>
+        <h1>Sample Ordered List</h1>
+        <ol>
+            <li>Decimal Leading Zero</li>
+            <li>Armenian</li>
+            <li>Gregorian</li>
+            <li>Lower Alpha</li>
+            <li>Lower Greek</li>
+            <li>Lower Latin</li>
+            <li>Lower Roman</li>
+            <li>Decimal</li>
+        </ol>
+        <hr>
+        <div class="division-container">
+            <div class="division1">
+                <img src="pngkit_home-icon-png_134067.png" style="height:100%">
+            </div>
+            <div class="division2">
+                <div class="division2-contents">
+                    <h1>Sample Heading 2</h1>
+                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla ultricies quam eu metus elementum rhoncus. Etiam semper molestie ligula, id commodo eros accumsan ut. Curabitur efficitur sagittis laoreet. Nulla at eros scelerisque, pulvinar lorem ac, luctus orci. Ut faucibus dictum libero, ac ullamcorper turpis blandit id. Quisque eget enim eget neque finibus cursus vel nec velit. Sed et suscipit ligula. Curabitur justo arcu, mollis sit amet ante non, facilisis imperdiet tellus. Nullam non facilisis erat, et volutpat odio. Praesent eget tincidunt mauris. Fusce non felis ligula. Pellentesque lacus lectus, rhoncus quis laoreet nec, sagittis sed purus. Integer ipsum orci, vehicula id eleifend ut, porta id neque. Aenean sit amet ornare ex. Integer tristique purus vitae elit tristique, sed convallis eros tincidunt.</p>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+        <div class="division-container">
+            <div class="division1">
+                <img src="pngkit_home-icon-png_134067.png" style="height:100%">
+            </div>
+            <div class="division2">
+                <div class="division2-contents">
+                    <h1>Sample Heading 2</h1>
+                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla ultricies quam eu metus elementum rhoncus. Etiam semper molestie ligula, id commodo eros accumsan ut. Curabitur efficitur sagittis laoreet. Nulla at eros scelerisque, pulvinar lorem ac, luctus orci. Ut faucibus dictum libero, ac ullamcorper turpis blandit id. Quisque eget enim eget neque finibus cursus vel nec velit. Sed et suscipit ligula. Curabitur justo arcu, mollis sit amet ante non, facilisis imperdiet tellus. Nullam non facilisis erat, et volutpat odio. Praesent eget tincidunt mauris. Fusce non felis ligula. Pellentesque lacus lectus, rhoncus quis laoreet nec, sagittis sed purus. Integer ipsum orci, vehicula id eleifend ut, porta id neque. Aenean sit amet ornare ex. Integer tristique purus vitae elit tristique, sed convallis eros tincidunt.</p>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+        <hr>
+        <div class="position-static">
+            <div class="position-absolute"></div>
+        </div>
+        <div class="position-relative">
+            <div class="position-absolute" style="top: 10px; z-index: 2;"></div>
+            <div class="position-absolute" style="top: 20px; left: 20px; background-color: yellowgreen; z-index: 1;"></div>
+            <div class="position-absolute" style="top: 30px; left: 30px; background-color: whitesmoke; z-index: 0;"></div>
+            
+            <div class="position-absolute" style="top: 10px; left: 90px; z-index: 2;"></div>
+            <div class="position-absolute" style="top: 20px; left: 100px; background-color: yellowgreen; z-index: 0;"></div>
+            <div class="position-absolute" style="top: 30px; left: 110px; background-color: whitesmoke; z-index: 1;"></div>
+            
+            <div class="position-absolute" style="top: 10px; left: 170px; z-index: 0;"></div>
+            <div class="position-absolute" style="top: 20px; left: 180px; background-color: yellowgreen; z-index: 1;"></div>
+            <div class="position-absolute" style="top: 30px; left: 190px; background-color: whitesmoke; z-index: 2;"></div>
+            
+            <div class="position-absolute" style="width: 100px; height: 100px; top: 110px; left: 170px; z-index: 1;"></div>
+            <div class="position-absolute" style="width: 100px; height: 100px; top: 130px; left: 190px; background-color: yellowgreen; z-index: 0;"></div>
+            <div class="position-absolute" style="width: 100px; height: 100px; top: 150px; left: 210px; background-color: whitesmoke; z-index: 2;"></div>
+        </div>
+        <h1 class="position-fixed">Menu</h1>
+        <hr>
+        <div class="display-container">
+            <p>This is a <span class="display-block">block</span> element</p>
+            <p>This is a <span class="display-inline">inline</span> element</p>
+            <p>This is a <span class="display-inline-block">inline-block</span> element</p>
+            <p>This is a <span class="display-none">none</span> element</p>
+        </div>
+        <div class="flexbox">
+            <div class="flex-1">Sample Element Hello!</div>
+            <div class="flex-2">Sample Element Hello!</div>
+            <div class="flex-3">Sample Element Hello!</div>
+
+            <div class="flex-1">Sample Element Hello!</div>
+            <div class="flex-2">Sample Element Hello!</div>
+            <div class="flex-3">Sample Element Hello!</div>
+
+            <div class="flex-1">Sample Element Hello!</div>
+            <div class="flex-2">Sample Element Hello!</div>
+            <div class="flex-3">Sample Element Hello!</div>
+        </div>
+    </body>
+</html>
